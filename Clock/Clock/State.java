@@ -4,32 +4,36 @@ package Clock;
 /**
  * Write a description of class State here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Cedar Drake)
+ * @version (1.0.0)
  */
 public class State
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class State
-     */
-    public State()
-    {
-        // initialise instance variables
-        x = 0;
+    int[][] deck = {
+        {1, 1, 1, 1},
+        {2, 2, 2, 2},
+        {3, 3, 3, 3},
+        {4, 4, 4, 4},
+        {5, 5, 5, 5},
+        {6, 6, 6, 6},
+        {7, 7, 7, 7},
+        {8, 8, 8, 8},
+        {9, 9, 9, 9},
+        {10, 10, 10, 10},
+        {11, 11, 11, 11},
+        {12, 12, 12, 12},
+        {13, 13, 13, 13},
+    };
+    private int gameState = Constants.STANDBY;
+    private String name = "";
+    public int setGameState() {
+        return this.gameState;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setGameState(int gameState) {
+        this.gameState = gameState;
     }
+    public void setName (String name) {
+        this.name = name;
+    }
+    
 }

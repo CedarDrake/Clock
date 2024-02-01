@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=State
+comment0.text=\n\ Write\ a\ description\ of\ class\ State\ here.\n\n\ @author\ (Cedar\ Drake)\n\ @version\ (1.0.0)\n
+comment1.params=
+comment1.target=int\ setGameState()
+comment2.params=gameState
+comment2.target=void\ setGameState(int)
+comment3.params=name
+comment3.target=void\ setName(java.lang.String)
+numComments=4
