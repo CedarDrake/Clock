@@ -1,4 +1,5 @@
 package Clock;
+import java.util.Scanner;
 
 
 /**
@@ -9,27 +10,15 @@ package Clock;
  */
 public class UI
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class UI
-     */
-    public UI()
-    {
-        // initialise instance variables
-        x = 0;
+    Scanner scanner;
+    
+    public UI() {
+        scanner = new Scanner(System.in);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getPlayerName(String name) {
+        return name;
+    }
+    public boolean isLegalMove(State state, int cell) {
+        if (
     }
 }
