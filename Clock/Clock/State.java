@@ -38,7 +38,11 @@ public class State
         this.name = name;
     }
     public int getDeck (int row, int col) {
-        return this.deck[row][col];
+        int randomCard = 0;
+        randomCard = (int)Math.random()*Constants.DECK_SIZE;
+        col = randomCard % 4;
+        row = randomCard % 13;
+        return deck[row][col];
     }
     public void setDeck(int row, int col, int value) {
         this.deck[row][col] = value;
