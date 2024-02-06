@@ -18,15 +18,15 @@ public class UI
     public String getPlayerName(String name) {
         return name;
     }
-    public boolean isLegalCard(State state, int row, int col) {
-        if (state.getDeck(row, col) == 0) {
+    public boolean isLegalCard(State state) {
+        if (state.getDeck() == 0) {
             return false;
         } else {
             return true;
         }
     }
     public boolean isLegalMove(State state, int cell, int row, int col) {
-        if (state.getDeck(row, col) == cell) {
+        if (state.getDeck() == cell) {
             return true;
         } else {
             return false;

@@ -22,12 +22,13 @@ public class State
         {10, 10, 10, 10}, // = 40
         {11, 11, 11, 11}, // = 44
         {12, 12, 12, 12}, // = 48
-        {13, 13, 13, 13},
+        {13, 13, 13, 13}, // = 52
     };
     private int gameState = Constants.STANDBY;
     private String name = "";
     int cell = 0;
-    
+    int row = 0;
+    int col = 0;
     public int setGameState() {
         return this.gameState;
     }
@@ -37,14 +38,18 @@ public class State
     public void setName (String name) {
         this.name = name;
     }
-    public int getDeck (int row, int col) {
-        int randomCard = 0;
-        randomCard = (int)Math.random()*Constants.DECK_SIZE;
-        col = randomCard % 4;
-        row = randomCard % 13;
-        return deck[row][col];
+    public int randomCardCol() {
+        int randomCardCol = (int)(Math.random()*Constants.MAX_HAND);
+        return col = randomCardCol;
     }
-    public void setDeck(int row, int col, int value) {
+    public int randomCardRow() {
+        int randomCardRow = (int)(Math.random()*Constants.SUIT_SIZE);
+        return row = randomCardRow;
+    }
+    public int getDeck () {
+        return deck[col][row];
+    }
+    public void setDeck(int value) {
         this.deck[row][col] = value;
     }
     public int setCell(int cell) {
@@ -56,9 +61,9 @@ public class State
     public boolean isWinner() {
         int total = 0;
         boolean isWinner = false;
-        for (int i = 0; i >= 11; i++) {
-            for (int j = 0; j >=3; j++) {
-                total = getDeck(i, j);
+        for (int i = 0; i <= 11; i++) {
+            for (int j = 0; j <= 3; j++) {
+                total += deck[i][j];
             }
         }
         if (total == 0) {
