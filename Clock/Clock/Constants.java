@@ -30,6 +30,6 @@ public class Constants
     public static final String WINNER = "You won! That was a 1/13 chance";
     public static final String LOSER = "There are no more moves. You lost :(";
     public static final String NEW_GAME_STARTED = "Welcome to Clock solitaire, please move the card in the center to the correct place on a clock";
-    public static final String GET_MOVE_STRING = "Enter a number w/ the number on the clock. -->";
+    public static final String GET_MOVE_INT = "%s , enter the number to the corresponding point on a clock. -->";
     
 }

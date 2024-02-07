@@ -26,9 +26,9 @@ public class State
     };
     private int gameState = Constants.STANDBY;
     private String name = "";
-    int cell = 0;
-    int row = 0;
-    int col = 0;
+    private int cell[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private int row = 0;
+    private int col = 0;
     public int setGameState() {
         return this.gameState;
     }
@@ -37,6 +37,9 @@ public class State
     }
     public void setName (String name) {
         this.name = name;
+    }
+    public String getName (String name) {
+        return name;
     }
     public int randomCardCol() {
         int randomCardCol = (int)(Math.random()*Constants.MAX_HAND);
@@ -49,14 +52,14 @@ public class State
     public int getDeck () {
         return deck[col][row];
     }
-    public void setDeck(int value) {
-        this.deck[row][col] = value;
+    public void setDeck() {
+        this.deck[row][col] = 0;
     }
-    public int setCell(int cell) {
-        return this.cell;
+    public int getCell(int cell) {
+        return this.cell[cell];
     }
-    public void getCell(int cell, int value) {
-        this.cell = cell;
+    public void setCell(int cell) {
+        this.cell[cell]++;
     }
     public boolean isWinner() {
         int total = 0;
