@@ -29,6 +29,7 @@ public class State
     private int cell[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private int row = 0;
     private int col = 0;
+    private int num = 0;
     public int setGameState() {
         return this.gameState;
     }

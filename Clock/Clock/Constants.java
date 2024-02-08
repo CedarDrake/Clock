@@ -21,7 +21,7 @@ public class Constants
     public static final int WIN = 4;
     public static final int QUIT_PROGRAM = 5;
     
-    public static final String DIVIDER_STRING = " ";
+    public static final String DIVIDER_STRING = "    ";
     public static final String HAND_STRING = "|%s|";
     public static final String GET_PLAYER_NAME = "Player, what is your name? -->";
     public static final String WRONG_HAND_PLACEMENT = "Please move the card to the correct spot on the clock";

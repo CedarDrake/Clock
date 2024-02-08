@@ -48,8 +48,24 @@ public class UI
             return false;
         }
     }
-    public boolean startNewGame() {
+    public boolean startNewGame(State state) {
         System.out.println(Constants.NEW_GAME);
-        for 
+        String yesOrNo = scanner.next();
+        if (yesOrNo == "y" || yesOrNo == "Y") {
+            for (int i = 0; i <= 12; i++) {
+                for (int j = 0; j <= 3; j++) {
+                    state.deck[j][i] = i + 1;
+                }
+            }
+        }
+        return yesOrNo.equals("y") || yesOrNo.equals("Y");
+    }
+    public void printBoard(State state) {
+        System.out.println(Constants.DIVIDER_STRING);
+        for (int i = 0; i <= 6; i++) {
+            for (int j = 0; j <= 6; j++) {
+                
+            }
+        }
     }
 }

@@ -1,12 +1,18 @@
 #BlueJ class context
 comment0.target=UI
-comment0.text=\n\ Write\ a\ description\ of\ class\ UI\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ UI\ here.\n\n\ @author\ (Cedar\ Drake)\n\ @version\ (1.0.0)\n
 comment1.params=
 comment1.target=UI()
 comment2.params=name
 comment2.target=java.lang.String\ getPlayerName(java.lang.String)
-comment3.params=state\ row\ col
-comment3.target=boolean\ isLegalCard(State,\ int,\ int)
-comment4.params=state\ cell\ row\ col
-comment4.target=boolean\ isLegalMove(State,\ int,\ int,\ int)
-numComments=5
+comment3.params=name\ value\ state
+comment3.target=int\ getMove(java.lang.String,\ int,\ State)
+comment4.params=state
+comment4.target=boolean\ isLegalCard(State)
+comment5.params=state\ cell\ row\ col
+comment5.target=boolean\ isLegalMove(State,\ int,\ int,\ int)
+comment6.params=state
+comment6.target=boolean\ startNewGame(State)
+comment7.params=state
+comment7.target=void\ printBoard(State)
+numComments=8
