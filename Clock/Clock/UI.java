@@ -61,11 +61,15 @@ public class UI
         return yesOrNo.equals("y") || yesOrNo.equals("Y");
     }
     public void printBoard(State state) {
-        System.out.println(Constants.DIVIDER_STRING);
-        for (int i = 0; i <= 6; i++) {
-            for (int j = 0; j <= 6; j++) {
-                
-            }
-        }
+        System.out.println();
+        System.out.printf(Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(10) + Constants.HAND_STRING, state.getCell(11) + Constants.HAND_STRING, state.getCell(0) + Constants.DIVIDER_STRING);
+        System.out.println();
+        System.out.printf(Constants.HAND_STRING, state.getCell(9) + Constants.DIVIDER_STRING + Constants.DIVIDER_STRING + Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(1));
+        System.out.println();
+        System.out.printf(Constants.HAND_STRING, state.getCell(8) + Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(12) + Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(2));
+        System.out.println();
+        System.out.printf(Constants.HAND_STRING, state.getCell(7) + Constants.DIVIDER_STRING + Constants.DIVIDER_STRING + Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(3));
+        System.out.println();
+        System.out.printf(Constants.DIVIDER_STRING + Constants.HAND_STRING, state.getCell(6) + Constants.HAND_STRING, state.getCell(5) + Constants.HAND_STRING, state.getCell(4) + Constants.DIVIDER_STRING);
     }
 }

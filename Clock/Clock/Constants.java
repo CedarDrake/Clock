@@ -22,7 +22,7 @@ public class Constants
     public static final int QUIT_PROGRAM = 5;
     
     public static final String DIVIDER_STRING = "    ";
-    public static final String HAND_STRING = "|%s|";
+    public static final String HAND_STRING = "|%d|";
     public static final String GET_PLAYER_NAME = "Player, what is your name? -->";
     public static final String WRONG_HAND_PLACEMENT = "Please move the card to the correct spot on the clock";
     public static final String INVALID_MOVE_ERROR = "Please enter a vaild number on a clock";
@@ -31,5 +31,4 @@ public class Constants
     public static final String LOSER = "There are no more moves. You lost :(";
     public static final String NEW_GAME_STARTED = "Welcome to Clock solitaire, please move the card in the center to the correct place on a clock";
     public static final String GET_MOVE_INT = "%s , enter the number to the corresponding point on a clock. -->";
-    
 }
