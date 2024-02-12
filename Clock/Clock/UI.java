@@ -34,6 +34,10 @@ public class UI
         }
         return value;
     }
+    public void setMove(String name, int value, State state, int cell[]) {
+        
+        cell[value] ++;
+    }
     public boolean isLegalCard(State state) {
         if (state.getDeck() == 0) {
             return false;
@@ -59,6 +63,12 @@ public class UI
             }
         }
         return yesOrNo.equals("y") || yesOrNo.equals("Y");
+    }
+    public void printWelcome() {
+        System.out.println(Constants.NEW_GAME_STARTED);
+    }
+    public void printInvalidRowOrColumn() {
+        System.out.println(Constants.INVALID_MOVE_ERROR);
     }
     public void printBoard(State state) {
         System.out.println();
