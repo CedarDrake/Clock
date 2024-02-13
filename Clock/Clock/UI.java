@@ -18,10 +18,11 @@ public class UI
     public String getPlayerName(String name) {
         return name;
     }
-    public int getMove(String name, int value, State state) {
+    public int getMove(String name, State state) {
+        int value = 0;
         while (value <= 0 || value >= 13) {
             try {
-               System.out.printf(Constants.GET_MOVE_INT, state.getName(name));
+               System.out.printf(Constants.GET_MOVE_INT, state.getName());
                value = scanner.nextInt();
                if (value < 1 || value > 12) {
                    System.out.println(Constants.INVALID_MOVE_ERROR);
@@ -45,7 +46,7 @@ public class UI
             return true;
         }
     }
-    public boolean isLegalMove(State state, int cell, int row, int col) {
+    public boolean isLegalMove(State state, int cell) {
         if (state.getDeck() == cell) {
             return true;
         } else {

@@ -26,11 +26,11 @@ public class State
     };
     private int gameState = Constants.STANDBY;
     private String name = "";
-    private int cell[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int cell[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private int row = 0;
     private int col = 0;
     private int num = 0;
-    public int setGameState() {
+    public int getGameState() {
         return this.gameState;
     }
     public void setGameState(int gameState) {
@@ -39,7 +39,7 @@ public class State
     public void setName (String name) {
         this.name = name;
     }
-    public String getName (String name) {
+    public String getName () {
         return name;
     }
     public int randomCardCol() {
@@ -59,8 +59,8 @@ public class State
     public int getCell(int cell) {
         return this.cell[cell];
     }
-    public void setCell(int cell) {
-        this.cell[cell]++;
+    public void setCell(int cell, int value) {
+        this.cell[cell] = value;
     }
     public boolean isWinner() {
         int total = 0;
