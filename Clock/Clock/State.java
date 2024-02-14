@@ -53,11 +53,11 @@ public class State
     public int getDeck () {
         return deck[col][row];
     }
-    public void setDeck() {
-        this.deck[row][col] = 0;
+    public void setDeck(int value) {
+        this.deck[row][col] = value;
     }
-    public int getCell(int cell) {
-        return this.cell[cell];
+    public int getCell(int value) {
+        return this.cell[value];
     }
     public void setCell(int cell, int value) {
         this.cell[cell] = value;

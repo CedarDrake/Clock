@@ -13,12 +13,13 @@ public class EventLoop
     UI ui = new UI();
     int row, col;
     int card = 0;
+    
     public static void main(String[] args) {
         EventLoop eventLoop = new EventLoop();
-        eventLoop.eventLoop();
+        eventLoop.run();
     }
     
-    public void eventLoop() {
+    public void run() {
         while (state.getGameState() != Constants.QUIT_PROGRAM) {
             int gameState = state.getGameState();
             if (gameState == Constants.STANDBY) {
@@ -30,14 +31,15 @@ public class EventLoop
             else if (gameState == Constants.DRAW_CARD) {
                 row = state.randomCardRow();
                 col = state.randomCardCol();
-                card = deck[row][col];
+                getDeck()
                 if (ui.isLegalCard(state)) {
                     
                 }
             }
             else if (gameState == Constants.GET_MOVE) {
                 ui.printBoard(state);
-                state.setCell() = ui.getMove(state.getName(), state);
+                state.getCell(ui.getMove());
+                
                 if (ui.isLegalMove(state, cell)) {
                     
                 }

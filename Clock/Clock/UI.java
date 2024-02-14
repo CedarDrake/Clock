@@ -36,7 +36,6 @@ public class UI
         return value;
     }
     public void setMove(String name, int value, State state, int cell[]) {
-        
         cell[value] ++;
     }
     public boolean isLegalCard(State state) {
